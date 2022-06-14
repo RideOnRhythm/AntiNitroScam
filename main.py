@@ -14,5 +14,5 @@ for i in range(requests_amount):
     curl_request = curl_request.replace("tempemail", email)
     curl_request = curl_request.replace("temppassword", password)
     check_call(shlex.split(curl_request), stdout=DEVNULL, stderr=STDOUT)
-    print(f"Request {i + 1}/100: Email: {email}, Password: {password}")
+    print(f"Request {i + 1}/{requests_amount}: Email: {email}, Password: {password}")
     time.sleep(1)
